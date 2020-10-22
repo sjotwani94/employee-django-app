@@ -25,7 +25,7 @@ SECRET_KEY = 'q=^#&*$7&8^d_mh3x-h_$-qe8s1+nzzxg0i+3@j&s)mjb^6o$)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['employeedjangoapp.herokuapp.com']
+ALLOWED_HOSTS = ['employeedjangoapp.herokuapp.com','localhost']
 
 
 # Application definition
