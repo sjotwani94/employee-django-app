@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>{{ employee.first_name }} {{ employee.last_name }}</h3>
+            <p>Email ID: {{ employee.email_id }}</p>
+            <p>Phone Number: {{ employee.phone_num }}</p>
+            {% if employee.employee_gender == 'M' %}
+                <p>Gender: Male</p>
+            {% else %}
+                <p>Gender: Female</p>
+            {% endif %}
+            <p>Address: {{ employee.employee_address }}</p>
+            <p>Job:
+                {% for job in employee.employee_job.all %}
+                    <em>{{ job.name }}</em>
+                {% endfor %}
+            </p>
+            <p>Date of Birth: {{ employee.date_of_birth }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
